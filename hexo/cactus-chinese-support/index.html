@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/hexo-theme-cactus/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/hexo-theme-cactus/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/hexo-theme-cactus/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>增强cactus对中文和markdown样式的支持</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/hexo-theme-cactus/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/hexo-theme-cactus/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+    <script>
+  (function(d) {
+    var config = {
+      kitId: 'vdm6kqd',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/hexo-theme-cactus/">首页</a></li>
+         
+          <li><a href="/hexo-theme-cactus/about/">关于</a></li>
+         
+          <li><a href="/hexo-theme-cactus/archives/">归档</a></li>
+         
+          <li><a href="https://github.com/xuthus5">项目</a></li>
+         
+          <li><a href="/hexo-theme-cactus/search/">搜索</a></li>
+         
+          <li><a href="/hexo-theme-cactus/tags/">标签</a></li>
+         
+          <li><a href="/hexo-theme-cactus/categories/">分类</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/hexo-theme-cactus/default/hello-world/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&text=增强cactus对中文和markdown样式的支持"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&is_video=false&description=增强cactus对中文和markdown样式的支持"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=增强cactus对中文和markdown样式的支持&body=Check out this article: https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&name=增强cactus对中文和markdown样式的支持&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cactus-CN"><span class="toc-number">1.</span> <span class="toc-text">Cactus-CN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用说明"><span class="toc-number">1.1.</span> <span class="toc-text">使用说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特征"><span class="toc-number">1.2.</span> <span class="toc-text">特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-number">1.4.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版权"><span class="toc-number">1.5.</span> <span class="toc-text">版权</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        增强cactus对中文和markdown样式的支持
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">xuthus</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-09-22T07:11:16.000Z" itemprop="datePublished">2019-09-22</time>
+        
+        (Updated: <time datetime="2019-09-22T07:27:23.344Z" itemprop="dateModified">2019-09-22</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/hexo-theme-cactus/categories/hexo/">hexo</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/hexo-theme-cactus/tags/cactus/">cactus</a>, <a class="tag-link" href="/hexo-theme-cactus/tags/hexo/">hexo</a>, <a class="tag-link" href="/hexo-theme-cactus/tags/markdown/">markdown</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Cactus-CN"><a href="#Cactus-CN" class="headerlink" title="Cactus-CN"></a>Cactus-CN</h1><p><a href="https://github.com/probberechts/hexo-theme-cactus" target="_blank" rel="noopener">Cactus</a>(仙人掌)是一个为<a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>开发的响应式个人网站主题,拥有清简的样式。我在采纳它作为我的博客主题时,感觉它在支持中文字体方面略显不足，有十分明显的锯齿感，于是在此主题的基础上，修改了些许样式，以符合个人审美。相信你对hexo有所了解,我将主题的配置文件项都给翻译了一遍,按照提示来就行了。</p>
+<p>:cactus: <a href="https://github.com/xuthus5/hexo-theme-cactus" target="_blank" rel="noopener">项目地址</a><br>:cactus: <a href="https://xuthus5.github.io/hexo-theme-cactus/">修改版演示</a><br>:cactus: <a href="https://probberechts.github.io/hexo-theme-cactus/cactus-white/public/" target="_blank" rel="noopener">原版演示</a></p>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><ul>
+<li><a href="#特征">特征</a></li>
+<li><a href="#安装">安装</a></li>
+<li><a href="#配置">配置</a></li>
+<li><a href="#版权">版权</a></li>
+</ul>
+<h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><ul>
+<li>中文字体增强</li>
+<li>修正发布文章未指定作者时作者项指向博客名称</li>
+<li>加强代码高亮对比度</li>
+<li>加强行级代码块样式</li>
+<li>加强表格样式</li>
+<li>删除Disqus功能</li>
+<li>删除谷歌分析/百度统计</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li><p>在博客的根目录下操作:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/xuthus5/hexo-theme-cactus.git themes/cactus</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改根目录下的 <code>config.yml</code> 文件的 <code>theme</code> 选项.</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># theme: landscape</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">cactus</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>创建 <code>关于我</code> 页面，请运行:</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
+
+<p> 文件将被创建在 <code>source/about/index.md</code><br> 下, 我认为这是必要的操作，它是对你个人的介绍，网站导航默认情况下也将引用它。</p>
+</li>
+<li><p>创建一篇文章</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new post <span class="string">"hello world"</span></span><br></pre></td></tr></table></figure>
+
+<p> 创建的文章将被创建在 <code>source/_posts/hello-world.md</code> 下.</p>
+</li>
+<li><p>运行: <code>hexo generate</code> 或者 <code>hexo server</code></p>
+</li>
+<li><p><a href="https://hexo.io/docs/deployment" target="_blank" rel="noopener">如何发表你的博客</a>!</p>
+</li>
+</ol>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>下面讨论几个比较重要的选项，这些选项在相关的<code>_config.yml</code>中都会被找到.</p>
+<ol>
+<li><p>在根目录下的 <code>_config.yml</code> 中指定主题:</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">theme_config:</span></span><br><span class="line"><span class="attr">  colorscheme:</span> <span class="string">white</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在主题的 <code>_config.yml</code> 下指定主题色彩方案，有4套方案分别是，white、classic、dark、light，建议white，本主题只做了white适配</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># themes/cactus/_config.yml</span></span><br><span class="line"><span class="attr">colorscheme:</span> <span class="string">white</span></span><br></pre></td></tr></table></figure>
+
+<p> 你可以在 <code>themes/cactus/source/css/_colors</code>下自定义颜色方案.</p>
+</li>
+<li><p>项目自定义导航选项，在根目录下的 <code>_config.yml</code>文件中:</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nav:</span></span><br><span class="line"><span class="attr">  Home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  About:</span> <span class="string">/about/</span></span><br><span class="line"><span class="attr">  Writing:</span> <span class="string">/archives/</span></span><br><span class="line"><span class="attr">  Projects:</span> <span class="attr">http://github.com/probberechts</span></span><br><span class="line"><span class="attr">  LINK_NAME:</span> <span class="string">URL</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内容分页</p>
+<ul>
+<li><p>仅显示制定数目的文章 (默认选项)</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">posts_overview:</span></span><br><span class="line"><span class="attr">  show_all_posts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  post_count:</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示所有文章</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">posts_overview:</span></span><br><span class="line"><span class="attr">  show_all_posts:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>个人项目清单</p>
+<p>手动创建文件 <code>source/_data/projects.json</code> 按照如下格式写入内容，即可在首页展示你的项目</p>
+ <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="attr">"name"</span>:<span class="string">"Hexo"</span>,</span><br><span class="line">       <span class="attr">"url"</span>:<span class="string">"https://hexo.io/"</span>,</span><br><span class="line">       <span class="attr">"desc"</span>:<span class="string">"A fast, simple &amp; powerful blog framework"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="attr">"name"</span>:<span class="string">"Font Awesome"</span>,</span><br><span class="line">       <span class="attr">"url"</span>:<span class="string">"http://fontawesome.io/"</span>,</span><br><span class="line">       <span class="attr">"desc"</span>:<span class="string">"The iconic font and CSS toolkit"</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>社交媒体链接</p>
+<p>Cactus可以在首页自动添加指向您的社交媒体帐户的链接。更新主题下的 <code>_config.yml</code>:</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social_links:</span></span><br><span class="line"><span class="attr">  github:</span> <span class="string">your-github-url</span></span><br><span class="line"><span class="attr">  twitter:</span> <span class="string">your-twitter-url</span></span><br><span class="line"><span class="attr">  NAME:</span> <span class="string">your-NAME-url</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>​   你可以自定义 <code>NAME</code> 只要它在 <a href="https://fontawesome.com/icons?d=gallery&s=brands" target="_blank" rel="noopener">Font Awesome icon</a> 中存在，就有可能被你使用。</p>
+<ol start="7">
+<li><p>多语言配置</p>
+<p>目前主题提供的语言支持在 <code>languages/*</code> 下,如果您想使用上面列出的语言之一，只需将配置文件语言项<code>language</code> 设置为所需的语言(例如<code>fr</code>)。如果你希望添加额外的语言翻译支持（例如，添加日语（ja）翻译支持）：</p>
+<ol>
+<li><p>配置文件<code>_config.yml</code> 设置语言项 <code>language</code>为<code>ja</code></p>
+</li>
+<li><p>在<code>themes/cactus/languages/</code> 中创建一个文件 <code>ja.yml</code></p>
+</li>
+<li><p>复制内容<code>themes/cactus/languages/default.yml</code>并将其粘贴到<code>ja.yml</code>文件中</p>
+</li>
+<li><p>用日语翻译替换所有英文字符串</p>
+</li>
+</ol>
+<p><strong>注意: Cactus 不支持多语言站点.</strong></p>
+</li>
+<li><p>RSS</p>
+<p>将<code>rss</code>字段设置为<code>_config.yml</code>以下值之一：</p>
+<ol>
+<li><p><code>rss: false</code> 将完全禁用rss（默认）。</p>
+</li>
+<li><p><code>rss: atom.xml</code> 设置特定的Feed链接。</p>
+</li>
+<li><p><code>rss:</code>留空以使用<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a>插件。</p>
+</li>
+</ol>
+</li>
+<li><p>代码高亮</p>
+<p>选择一个<a href="https://github.com/probberechts/hexo-theme-cactus/tree/master/source/css/_highlight" target="_blank" rel="noopener">可用的colorschemes</a>(默认github-gist)并将其添加到<code>_config.yml</code>：</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span> <span class="string">COLORSCHEME_NAME</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>标签与分类</p>
+<p>标签和分类需要被包含在文章的前端:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">title: 标签与分类</span><br><span class="line">date: 2017-12-24 23:29:53</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>Foo</span><br><span class="line"><span class="bullet">- </span>Bar</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">- </span>Baz</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">This post contains 2 tags and 1 category.</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="11">
+<li><p>标签页</p>
+<p>首先创建页面 <code>tags</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>然后修改页面的 <code>type</code> 值为 <code>tags</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">    -</span><span class="bullet">--</span></span><br><span class="line"><span class="attr">    title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">    date:</span> <span class="number">2019</span><span class="bullet">-09</span><span class="bullet">-22</span> <span class="number">14</span><span class="string">:58:00</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="bullet">    -</span><span class="bullet">--</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="12">
+<li><p>分类页</p>
+<p>首先创建页面 <code>categories</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">page</span> <span class="string">categories</span></span><br></pre></td></tr></table></figure>
+
+<p>然后修改页面 <code>type</code> 值为 <code>categories</code></p>
+</li>
+<li><p>本地搜索</p>
+<p>首先，安装<a href="https://www.npmjs.com/package/hexo-generator-search" target="_blank" rel="noopener">hexo-generate-search</a> 插件，它将生成一个搜索索引文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<p>接下来，创建一个显示搜索引擎的页面：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new page search</span></span><br></pre></td></tr></table></figure>
+
+<p>指定该页面的 <code>type: search</code> .</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Search</span><br><span class="line">type: search</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>最后，编辑<code>_config.yml</code>并添加导航菜单的链接。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nav:</span></span><br><span class="line"><span class="attr">  search:</span> <span class="string">/search/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="版权"><a href="#版权" class="headerlink" title="版权"></a>版权</h2><p>声明：本作基于hexo-theme-cactus进行局部美化</p>
+<p>使用字体:</p>
+<p>​   <a href="https://github.com/tonsky/FiraCode" target="_blank" rel="noopener">FiraCode</a> </p>
+<p>​   <a href="https://github.com/adobe-fonts/source-han-sans" target="_blank" rel="noopener">SourceHanSansCN</a></p>
+
+  </div>
+</article>
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/hexo-theme-cactus/">首页</a></li>
+         
+          <li><a href="/hexo-theme-cactus/about/">关于</a></li>
+         
+          <li><a href="/hexo-theme-cactus/archives/">归档</a></li>
+         
+          <li><a href="https://github.com/xuthus5">项目</a></li>
+         
+          <li><a href="/hexo-theme-cactus/search/">搜索</a></li>
+         
+          <li><a href="/hexo-theme-cactus/tags/">标签</a></li>
+         
+          <li><a href="/hexo-theme-cactus/categories/">分类</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cactus-CN"><span class="toc-number">1.</span> <span class="toc-text">Cactus-CN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用说明"><span class="toc-number">1.1.</span> <span class="toc-text">使用说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特征"><span class="toc-number">1.2.</span> <span class="toc-text">特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-number">1.4.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版权"><span class="toc-number">1.5.</span> <span class="toc-text">版权</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&text=增强cactus对中文和markdown样式的支持"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&is_video=false&description=增强cactus对中文和markdown样式的支持"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=增强cactus对中文和markdown样式的支持&body=Check out this article: https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&title=增强cactus对中文和markdown样式的支持"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://xuthus5.github.io/hexo-theme-cactus/hexo/cactus-chinese-support/&name=增强cactus对中文和markdown样式的支持&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 xuthus 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/hexo-theme-cactus/">首页</a></li>
+         
+          <li><a href="/hexo-theme-cactus/about/">关于</a></li>
+         
+          <li><a href="/hexo-theme-cactus/archives/">归档</a></li>
+         
+          <li><a href="https://github.com/xuthus5">项目</a></li>
+         
+          <li><a href="/hexo-theme-cactus/search/">搜索</a></li>
+         
+          <li><a href="/hexo-theme-cactus/tags/">标签</a></li>
+         
+          <li><a href="/hexo-theme-cactus/categories/">分类</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/hexo-theme-cactus/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/hexo-theme-cactus/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/hexo-theme-cactus/lib/jquery/jquery.min.js"></script>
+<script src="/hexo-theme-cactus/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/hexo-theme-cactus/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/hexo-theme-cactus/js/main.js"></script>
+<!-- search -->
+
+</body>
+</html>

@@ -59,7 +59,7 @@
     
   
     <div id="title">
-      <h1>xuthus&#39;s blog</h1>
+      <h1>xuthus</h1>
     </div>
   </a>
   <div id="nav">
@@ -107,7 +107,7 @@
         
         <footer id="footer">
   <div class="footer-left">
-    Copyright &copy; 2019 xuthus
+    Copyright &copy; 2019 xuthus 
   </div>
   <div class="footer-right">
     <nav>
@@ -144,6 +144,41 @@
 
 <script src="/hexo-theme-cactus/js/main.js"></script>
 <!-- search -->
+
+  <script src="/hexo-theme-cactus/js/search.js"></script>
+  <script type="text/javascript">
+  $(function() {
+
+    var $inputArea = $("input#search-input");
+    var $resultArea = document.querySelector("div#search-result");
+
+    $inputArea.focus(function() {
+      var search_path = "search.xml";
+      if (search_path.length == 0) {
+        search_path = "search.xml";
+      }
+      var path = "/hexo-theme-cactus/" + search_path;
+      searchFunc(path, 'search-input', 'search-result');
+    });
+
+    $inputArea.keydown(function(e) {
+      if (e.which == 13) {
+        e.preventDefault();
+      }
+    });
+
+    var observer = new MutationObserver(function(mutationsList, observer) {
+      if (mutationsList[0].addedNodes) {
+        $(".search-no-result").show(200);
+      } else {
+        $(".search-no-result").hide();
+      }
+    });
+
+    observer.observe($resultArea, { childList: true });
+
+  });
+  </script>
 
 </body>
 </html>
