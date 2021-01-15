@@ -166,3 +166,6 @@ cdn:
   text: 又拍云
   # image: /images/upyun.png
   site: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
+  
+tongji:
+  enabled: true
