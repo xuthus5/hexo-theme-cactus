@@ -68,7 +68,7 @@
 
 <% if (site.data.links) { %>
     <section id="links">
-        <span class="h1"><a href="<%- url_for(theme.links_url) %>"><%= __('index.links') %></a></span>
+        <span class="h1"><a href="<%- url_for(theme.links_url) %>" title="我的作品、文章、友情外链"><%= __('index.links') %></a></span>
         <ul class="link-list">
             <% for(var obj in site.data.links){ %>
                 <li class="link-item">
