@@ -156,6 +156,10 @@ icp:
   enabled: true
   url: http://www.beian.miit.gov.cn/
   text: 湘ICP备17005082号
+  
+# 统计 是否开启 不蒜子 统计
+tongji:
+  enabled: true
 
 # 是否在网站底部展示 CDN 厂商的信息
 # - image:厂商LOGO 选项不为空时 默认优先图片信息
